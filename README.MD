@@ -16,10 +16,14 @@
 * [docs/repo-structure.md](docs/repo-structure.md): v4.5.1 時点のリポジトリ構成解説
 * [docs/driving-script.md](docs/driving-script.md): 走行スクリプトの基本構造とコマンド例
 * [docs/donkey-cli.md](docs/donkey-cli.md): Donkey CLI コマンド一覧
+* [docs/teaching-data.md](docs/teaching-data.md): 教師データの構造など
+* [docs/model-type.md](docs/model-type.md): 生成できるモデルの種類とその特性
+* [docs/transfer-learning.md](docs/transfer-learning.md): 転移学習の実装状況（使用不可）
+* [docs/fine-tuning.md](docs/fine-tuning.md): ファインチューニングの実装状況
 
 ---
 
-* [donkeydocs-jp](https://github.com/rino-1830/donkeydocs-jp): donkeydocsの日本語訳版
+* [donkeydocs-jp](https://github.com/rino-1830/donkeydocs-jp): donkeydocs の日本語訳版
 * [donkeycar-for-pius](https://github.com/rino-1830/donkeycar-for-pius): DonkeyCar の PIUS の自律走行への転用など（開発用）
     * translate/release_4_5 で各ファイルの日本語訳と追加 Docstring が閲覧できます
 * [DonkeyCar_for_PIUS](https://github.com/kazysdlab/DonkeyCar_for_PIUS): DonkeyCar で PIUS を扱うためのパッチとカスタムスクリプト
