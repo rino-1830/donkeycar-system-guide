@@ -17,17 +17,16 @@
 * [docs/driving-script.md](docs/driving-script.md): 走行スクリプトの基本構造とコマンド例
 * [docs/donkey-cli.md](docs/donkey-cli.md): Donkey CLI コマンド一覧
 
-## 最短実行手順（メモ）
+## 主要コマンド
 
 ```bash
 # 環境構築
-python3 -m venv .venv
-source .venv/bin/activate
-pip install donkeycar==4.5.1
+conda activate donkey
+donkey createcar --path ~/mycar
 
 # モデル学習と走行
-python manage.py train --tub data/tub_1_23-07-2025
-python manage.py drive --model models/mypilot.h5
+python manage.py train --tub ./data --model ./models/model.h5
+python manage.py drive --model ./models/model.h5
 ```
 
 実験で不要になった tub データは容量が大きいので適宜削除してください。
