@@ -28,6 +28,7 @@
     * translate/release_4_5 で各ファイルの日本語訳と追加 Docstring が閲覧できます
 * [DonkeyCar_for_PIUS](https://github.com/kazysdlab/DonkeyCar_for_PIUS): DonkeyCar で PIUS を扱うためのパッチとカスタムスクリプト
     * 実際に PIUS を自律走行させる場合はこちらを使用してください
+* [donkey-teaching-data-merger](https://github.com/rino-1830/donkey-teaching-data-merger): 複数の端末から取得した教師データをまとめ、一度の学習に使えるようにするスクリプト
 
 ## その他のドキュメント
 
