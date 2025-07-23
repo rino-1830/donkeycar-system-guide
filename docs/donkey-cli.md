@@ -24,6 +24,7 @@ donkey <command> [options]
 
 ### findcar
 - ネットワークをスキャンして同一セグメントにある Donkeycar の IP アドレスを探します。
+  内部では `nmap` を使用しており、結果は標準出力に表示されます。
 
 ### calibrate
 - ステアリングやモーターの PWM 設定を対話的に調整します。
@@ -38,6 +39,7 @@ donkey <command> [options]
 ### tubclean
 - 指定したフォルダ内の Tub データを確認・削除できる Web サーバーを起動します。
 - 使用例: `donkey tubclean <tub_dir>`
+  デフォルトのポートは **8886** で、ブラウザから `http://<host>:8886` にアクセスします。
 
 ### tubplot
 - 学習データとモデルを用いて、操舵角やスロットルの予測をグラフ表示します。
@@ -101,6 +103,7 @@ donkey <command> [options]
 
 ### ui
 - Kivy ベースの GUI を起動します。ログの閲覧や学習の実行が可能です。
+  `python3 -m pip install kivy` 等で Kivy をインストールしておく必要があります。
 
 ## 参考
 各コマンドの実装は `donkeycar/management/base.py` にあります。詳細な挙動や追加オプションについてはソースコードを参照してください。
