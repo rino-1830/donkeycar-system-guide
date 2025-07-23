@@ -19,7 +19,7 @@
 
 ## その他のドキュメント
 
-* [misc/my-research-records](misc/my-research-records): 卒業研究中のログ（以下二つのリンクも中身は同一です）
+* [misc/my-research-records](misc/my-research-records.md): 卒業研究中のログ（以下二つのリンクも中身は同一です）
     * [Notion 共有リンク](https://www.notion.so/17354b326cae80009a49e3ae585028cf?source=copy_link)
     * [Notion 公開リンク](https://boiled-helenium-092.notion.site/17354b326cae80009a49e3ae585028cf)
 
