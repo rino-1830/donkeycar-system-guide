@@ -24,10 +24,11 @@
 * [misc/my-research-records](misc/my-research-records.md): 卒業研究中のログ（以下二つのリンクも中身は同一です）
     * [Notion 共有リンク](https://www.notion.so/17354b326cae80009a49e3ae585028cf?source=copy_link)
     * [Notion 公開リンク](https://boiled-helenium-092.notion.site/17354b326cae80009a49e3ae585028cf)
-
 * [donkeydocs-jp](https://github.com/rino-1830/donkeydocs-jp): donkeydocsの日本語訳版
-* [donkeycar-for-pius](https://github.com/rino-1830/donkeycar-for-pius): DonkeyCar の PIUS の自律走行への転用など
+* [donkeycar-for-pius](https://github.com/rino-1830/donkeycar-for-pius): DonkeyCar の PIUS の自律走行への転用など（開発用）
     * translate/release_4_5 で各ファイルの日本語訳と追加 Docstring が閲覧できます
+* [DonkeyCar_for_PIUS](https://github.com/kazysdlab/DonkeyCar_for_PIUS): DonkeyCar で PIUS を扱うためのパッチとカスタムスクリプト
+    * 実際に PIUS を自律走行させる場合はこちらを使用してください
 
 ## 主要コマンド
 
