@@ -1,6 +1,7 @@
 # DonkeyCar v4.5.1 補足資料
 
-このリポジトリは DonkeyCar v4.5.1 を対象とした、公式ドキュメントでは不足している情報をまとめたメモです。
+このリポジトリは DonkeyCar v4.5.1 を対象とした、公式ドキュメントでは不足している情報をまとめたメモです。  
+当アカウントの関連する全著作物は都立産業技術高等専門学校 吉田研究室に帰属します。
 
 ## 目的
 
@@ -59,4 +60,5 @@ python manage.py drive --model ./models/model.h5
 
 ## ライセンス
 
-MIT License
+Released under the MIT license  
+https://opensource.org/licenses/mit-license.php
