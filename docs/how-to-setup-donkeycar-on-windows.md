@@ -10,7 +10,7 @@ WSL 環境での構築については、別途 [こちら](https://github.com/ri
 そのため、下記手段に則り、DonkeyCar v4.5.1 をネイティブな Windows 上に構築することでそれらの問題を回避することができます。
 
 > [!CAUTION]
-> 本ドキュメントでは、ホスト OS として Windows 11 x64 を想定しています。32bit 版やWindows 10 以下の場合は適宜読み替えてください。
+> 本ドキュメントでは、ホスト OS として Windows 11 x64 を想定しています。32bit 版や Windows 10 以下の場合は適宜読み替えてください。
 
 ## 環境構築
 
@@ -25,13 +25,11 @@ WSL 環境での構築については、別途 [こちら](https://github.com/ri
 
 ### Miniconda による仮想環境構築
 
-Miniconda がインストール出来たら、スタートメニューから Anaconda Prompt を起動します。  
-起動すると、次のようなプロンプトが表示されます。  
-`user` は Windows のユーザー名のプレースホルダーです。
-適宜読み替えてください。
+Miniconda がインストール出来たら、スタートメニューから **Anaconda Prompt** を起動します。  
+起動すると、次のようなプロンプトが表示されます。
 
 ```bash
-(base) C:\User\user>
+(base) C:\Users\user>
 ```
 
 まずは DonkeyCar 用の仮想環境を作成します。  
@@ -39,12 +37,12 @@ Miniconda がインストール出来たら、スタートメニューから Ana
 このとき、既に同名の仮想環境が存在し共存させたい場合、`donkey` に当たる箇所を任意の仮想環境名に読み替えてください。
 
 ```bash
-(base) C:\User\user>conda create -n donkey python=3.6
-(base) C:\User\user>conda activate donkey
-(donkey) C:User\user>
+(base) C:\Users\user> conda create -n donkey python=3.6
+(base) C:\Users\user> conda activate donkey
+(donkey) C:\Users\user>
 ```
 
-公式ドキュメントには既に v5.1.0 未満のサポートについて情報が存在しないため Python 3.11 を推奨していますが、その通りに環境を構築すると v4.5.1 の環境は作成できません。必ず Python 3.6 を使用してください。  
+公式ドキュメントには既に v5.1.0 未満のサポートについて情報が存在しないため Python 3.11 を推奨していますが、その通りに環境を構築すると v4.5.1 の環境は作成できません。必ず Python 3.6 を使用してください。
 
 > [!NOTE]
 > リポジトリの `setup.py` には Python 3.7 も依存バージョンに登録されていますが、`donkeycar` の依存パッケージが Python 3.7 に対応していないためこれは無意味です。
@@ -59,127 +57,63 @@ DonkeyCar は Python ライブラリとして構築され、プロンプトコ�
 既に同名のクローンが存在し共存させたい場合、コマンド末尾にスペースを空けて任意のローカルリポジトリ名を設定することができます。
 
 ```bash
-(donkey) C:\User\user> mkdir projects
-(donkey) C:\User\user> cd projects
-(donkey) C:\User\user\projects> git clone https://github.com/autorope/donkeycar -b release_4_5
-(donkey) C:\User\user\projects> cd donkeycar
-(donkey) C:\User\user\projects\donkeycar>
+(donkey) C:\Users\user> mkdir projects
+(donkey) C:\Users\user> cd projects
+(donkey) C:\Users\user\projects> git clone https://github.com/autorope/donkeycar -b release_4_5
+(donkey) C:\Users\user\projects> cd donkeycar
+(donkey) C:\Users\user\projects\donkeycar>
 ```
 
-クローンしたリポジトリに移動し、`setup.py` を使った依存関係のインストールを行いますが、<font color="red">**GPU を使用する場合とそうでない場合で導入手順が変わります**</font>。
+クローンしたリポジトリに移動し、`setup.py` を使った依存関係のインストールを行いますが、<span style="color: red">**GPU を使用する場合とそうでない場合で導入手順が変わります**</span>。
 
 #### GPU を使用する場合
 
-GPU を使用する場合、次のコマンドで `tensorflow==2.2.0` を導入します。  
+GPU を使用する場合、次のコマンドで `tensorflow==2.2.0` を導入します。
 
 ```bash
-(donkey) C:\User\user\projects\donkeycar> pip install -e .[tf]
+(donkey) C:\Users\user\projects\donkeycar> pip install -e .[tf]
 ```
 
 > [!NOTE]
 > Python 3.6 で利用可能な TensorFlow の最新バージョンはドキュメント執筆当時 2.6.2 ですが、依存関係の `six~=1.15.0`、`typing-extensions~=3.7.4` が `donkeycar` の依存関係と競合します。  
 > そのため、`setup.py` に明記されたバージョンを使用する必要があります。
 
-次に、下記リンクを参照し使用する GPU に合わせた CUDA Toolkit をインストールします。
+次に、下記リンクを参照し CUDA Toolkit 10.1 と cuDNN をインストールします。
 
-- [CUDA GPU Compute Capability](https://developer.nvidia.com/cuda-gpus): GPU と CUDA の対応表
-- [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive): CUDA Toolkit のダウンロードリンクのリスト
-  - ローカルインストーラーはかなり容量が大きいので、必要なくなったら削除することを推奨します。  
+- [CUDA Toolkit 10.1 Update 2 Archive](https://developer.nvidia.com/cuda-10.1-download-archive-update2)
+- [cuDNN 9.11.0 Downloads](https://developer.nvidia.com/rdp/cudnn-download)
 
-ドライバに対応している CUDA のバージョンは PowerShell の `nvidia-smi` コマンドでも確認できます。
+CUDA のインストールが完了した後、PowerShell で `nvcc --version` コマンドを実行することで CUDA が正常にインストールできたか確認します。
 
-```shell
-> nvidia-smi
-Thu Jul 31 00:04:18 2025
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 577.00                 Driver Version: 577.00         CUDA Version: 12.9     |
-|-----------------------------------------+------------------------+----------------------+
-| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA GeForce RTX 3060 Ti   WDDM  |   00000000:01:00.0  On |                  N/A |
-| 30%   42C    P8             22W /  200W |    2138MiB /   8192MiB |      3%      Default |
-|                                         |                        |                  N/A |
-+-----------------------------------------+------------------------+----------------------+
-
-（後略）
-```
-
-CUDA Toolkit インストールが完了した後、PwerShell で `nvcc --version` コマンドを実行することで CUDA が正常にインストールできたか確認します。
-
-```shell
+```powershell
 > nvcc --version
 nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2025 NVIDIA Corporation
-Built on Tue_May_27_02:24:01_Pacific_Daylight_Time_2025
-Cuda compilation tools, release 12.9, V12.9.86
-Build cuda_12.9.r12.9/compiler.36037853_0
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Sun_Jul_28_19:12:52_Pacific_Daylight_Time_2019
+Cuda compilation tools, release 10.1, V10.1.243
 ```
 
----
-
-このとき、CUDA 11 以上を使用して居る場合は次の修正を行う必要があります。
-
-参考文献：[cudart64_101.dllが見つからない問題](https://qiita.com/Radley/items/985454b4df7f86e743d9)
-
-> [!CAUTION]
->この修正は TensorFlow 2.2.0 をどうにか最新の CUDA で利用するための処置なので、どのような不具合を誘発するか不明です。
->必ず自己責任で行ってください。
-
-エクスプローラーなどで CUDA Toolkit のインストールディレクトリを開きます。  
-デフォルトでは `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\<cuda-version>\bin` です。
-
-このディレクトリ内の `cudart64_*.dll` を同じディレクトリ内にコピーし、コピーしたものを `cudart64_101.dll` にリネームします。
-
-`<cuda-version>` や `*` などのプレースホルダーは適宜読み替えてください。
-
-![`cudart64_*.dll` のリネーム](/assets/rename-cudart.png)
-
-これにより、下記警告が発生せずに CUDA を利用することができます。
-
-```bash
-> (donkey) C:\User\user\mycar> python manage.py train --tubs=./data --model=./models/model.h5
-cv2: 4.6.0
-sklearn: 0.24.2
-skimage: 0.17.2
-________             ______                   _________
-___  __ \_______________  /___________  __    __  ____/_____ ________
-__  / / /  __ \_  __ \_  //_/  _ \_  / / /    _  /    _  __ `/_  ___/
-_  /_/ // /_/ /  / / /  ,<  /  __/  /_/ /     / /___  / /_/ /_  /
-/_____/ \____//_/ /_//_/|_| \___/_\__, /      \____/  \__,_/ /_/
-                                 /____/
-
-using donkey v4.5.1 ...
-2025-07-30 23:07:05.146062: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_101.dll'; dlerror: cudart64_101.dll not found
-2025-07-30 23:07:05.146842: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
-Usage:
-    manage.py drive [--model=<model>]
-    manage.py train [--tubs=<tub_paths>] (--model=<model>)
-    [--transfer=<transfer_model>]
-    [--comment=<comment>]
-
-（後略）
-```
+> CUDA 11 以降を強引に使用する方法についての記述を削除しました。  
+> 必要な方はコミット履歴を参照してください。
 
 完了後は次のセクション **GPU を使用しない場合** に進みます。
 
 #### GPU を使用しない場合
 
-前述の **GPU を使用する場合** を行った場合は、このセクションで先ほど導入したいくつかのパッケージを `donkeycar` の依存関係で上書きすることになりますが、正常な動作です。
+前述の **GPU を使用する場合** を実施した場合は、このセクションで先ほど導入したいくつかのパッケージを `donkeycar` の依存関係で上書きすることになりますが、正常な動作です。
 
 以下のコマンドで、`opencv-python-headless==4.6.0.66` をインストールします。  
 対応バージョン自体はより高いものがあるはずですが、不明な理由で wheel のビルドに失敗するためこのバージョン以外は使用できません。  
 これはホスト PC に限らず、NVIDIA Jetson Nano
 
 ```bash
-(donkey) C:\User\user\projects\donkeycar> pip install opencv-python-headless==4.6.0.66
+(donkey) C:\Users\user\projects\donkeycar> pip install opencv-python-headless==4.6.0.66
 ```
 
 次に、以下のコマンドでホスト PC に必要な依存環境を導入します。
 
 ```bash
-(donkey) C:\User\user\projects\donkeycar> pip install -e .[pc]
+(donkey) C:\Users\user\projects\donkeycar> pip install -e .[pc]
 ```
 
 念のため、`pip check` などで依存関係の破綻を確認しておきます。

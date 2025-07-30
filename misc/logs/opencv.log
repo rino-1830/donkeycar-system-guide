@@ -1,0 +1,573 @@
+(donkey_4.5.1) d:\Documents\Projects\donkey_4_5>pip install -e .[pc]
+Obtaining file:///D:/Documents/Projects/donkey_4_5
+Collecting numpy==1.19
+  Downloading numpy-1.19.0-cp36-cp36m-win_amd64.whl (13.0 MB)
+     |████████████████████████████████| 13.0 MB 726 kB/s
+Collecting pillow
+  Using cached Pillow-8.4.0-cp36-cp36m-win_amd64.whl (3.2 MB)
+Collecting docopt
+  Downloading docopt-0.6.2.tar.gz (25 kB)
+Collecting tornado
+  Downloading tornado-6.1-cp36-cp36m-win_amd64.whl (422 kB)
+     |████████████████████████████████| 422 kB ...
+Collecting requests
+  Using cached requests-2.27.1-py2.py3-none-any.whl (63 kB)
+Collecting h5py
+  Downloading h5py-3.1.0-cp36-cp36m-win_amd64.whl (2.7 MB)
+     |████████████████████████████████| 2.7 MB 6.8 MB/s
+Collecting PrettyTable
+  Downloading prettytable-2.5.0-py3-none-any.whl (24 kB)
+Collecting paho-mqtt
+  Downloading paho-mqtt-1.6.1.tar.gz (99 kB)
+     |████████████████████████████████| 99 kB 6.4 MB/s
+Collecting simple_pid
+  Downloading simple_pid-2.0.1-py3-none-any.whl (7.2 kB)
+Collecting progress
+  Downloading progress-1.6.1-py3-none-any.whl (9.8 kB)
+Collecting typing_extensions
+  Using cached typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+Collecting pyfiglet
+  Downloading pyfiglet-0.8.post1-py2.py3-none-any.whl (865 kB)
+     |████████████████████████████████| 865 kB ...
+Collecting psutil
+  Using cached psutil-7.0.0-cp36-cp36m-win_amd64.whl (248 kB)
+Collecting pynmea2
+  Downloading pynmea2-1.19.0-py3-none-any.whl (30 kB)
+Collecting pyserial
+  Downloading pyserial-3.5-py2.py3-none-any.whl (90 kB)
+     |████████████████████████████████| 90 kB ...
+Collecting utm
+  Downloading utm-0.7.0.tar.gz (8.7 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.3.4-cp36-cp36m-win_amd64.whl (8.5 MB)
+     |████████████████████████████████| 8.5 MB 6.8 MB/s
+Collecting kivy
+  Downloading Kivy-2.0.0-cp36-cp36m-win_amd64.whl (4.0 MB)
+     |████████████████████████████████| 4.0 MB ...
+Collecting protobuf
+  Using cached protobuf-3.19.6-cp36-cp36m-win_amd64.whl (897 kB)
+Collecting pandas
+  Using cached pandas-1.1.5-cp36-cp36m-win_amd64.whl (8.7 MB)
+Collecting pyyaml
+  Downloading PyYAML-6.0.1-cp36-cp36m-win_amd64.whl (153 kB)
+     |████████████████████████████████| 153 kB 6.4 MB/s
+Collecting plotly
+  Downloading plotly-5.18.0-py3-none-any.whl (15.6 MB)
+     |████████████████████████████████| 15.6 MB ...
+Collecting albumentations
+  Downloading albumentations-1.3.0-py3-none-any.whl (123 kB)
+     |████████████████████████████████| 123 kB ...
+Collecting opencv-python-headless>=4.1.1
+  Downloading opencv-python-headless-4.12.0.88.tar.gz (95.4 MB)
+     |████████████████████████████████| 95.4 MB 6.4 MB/s
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+    Preparing wheel metadata ... done
+Collecting qudida>=0.0.4
+  Downloading qudida-0.0.4-py3-none-any.whl (3.5 kB)
+Collecting scipy
+  Using cached scipy-1.5.4-cp36-cp36m-win_amd64.whl (31.2 MB)
+Collecting scikit-image>=0.16.1
+  Downloading scikit_image-0.17.2-cp36-cp36m-win_amd64.whl (11.5 MB)
+     |████████████████████████████████| 11.5 MB 6.4 MB/s
+Collecting scikit-learn>=0.19.1
+  Downloading scikit_learn-0.24.2-cp36-cp36m-win_amd64.whl (6.8 MB)
+     |████████████████████████████████| 6.8 MB ...
+Collecting PyWavelets>=1.1.1
+  Downloading PyWavelets-1.1.1-cp36-cp36m-win_amd64.whl (4.2 MB)
+     |████████████████████████████████| 4.2 MB 6.4 MB/s
+Collecting networkx>=2.0
+  Downloading networkx-2.5.1-py3-none-any.whl (1.6 MB)
+     |████████████████████████████████| 1.6 MB 6.8 MB/s
+Collecting tifffile>=2019.7.26
+  Downloading tifffile-2020.9.3-py3-none-any.whl (148 kB)
+     |████████████████████████████████| 148 kB ...
+Collecting imageio>=2.3.0
+  Downloading imageio-2.15.0-py3-none-any.whl (3.3 MB)
+     |████████████████████████████████| 3.3 MB ...
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.3.1-cp36-cp36m-win_amd64.whl (51 kB)
+     |████████████████████████████████| 51 kB ...
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3
+  Using cached pyparsing-3.1.4-py3-none-any.whl (104 kB)
+Collecting python-dateutil>=2.1
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Collecting cycler>=0.10
+  Using cached cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting decorator<5,>=4.3
+  Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+Collecting six>=1.5
+  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting joblib>=0.11
+  Downloading joblib-1.1.1-py2.py3-none-any.whl (309 kB)
+     |████████████████████████████████| 309 kB ...
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting cached-property
+  Downloading cached_property-1.5.2-py2.py3-none-any.whl (7.6 kB)
+Collecting docutils
+  Using cached docutils-0.18.1-py2.py3-none-any.whl (570 kB)
+Collecting pygments
+  Using cached Pygments-2.14.0-py3-none-any.whl (1.1 MB)
+Collecting kivy-deps.sdl2~=0.3.1
+  Downloading kivy_deps.sdl2-0.3.1-cp36-cp36m-win_amd64.whl (2.5 MB)
+     |████████████████████████████████| 2.5 MB ...
+Collecting kivy-deps.angle~=0.3.0
+  Downloading kivy_deps.angle-0.3.0-cp36-cp36m-win_amd64.whl (4.7 MB)
+     |████████████████████████████████| 4.7 MB 102 kB/s
+Collecting Kivy-Garden>=0.1.4
+  Downloading Kivy_Garden-0.1.5-py3-none-any.whl (4.6 kB)
+Collecting kivy-deps.glew~=0.3.0
+  Downloading kivy_deps.glew-0.3.0-cp36-cp36m-win_amd64.whl (123 kB)
+     |████████████████████████████████| 123 kB ...
+Collecting pypiwin32
+  Downloading pypiwin32-223-py3-none-any.whl (1.7 kB)
+Collecting pytz>=2017.2
+  Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Collecting packaging
+  Using cached packaging-21.3-py3-none-any.whl (40 kB)
+Collecting tenacity>=6.2.0
+  Downloading tenacity-8.2.2-py3-none-any.whl (24 kB)
+Collecting wcwidth
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Collecting importlib-metadata
+  Using cached importlib_metadata-4.8.3-py3-none-any.whl (17 kB)
+Collecting zipp>=0.5
+  Using cached zipp-3.6.0-py3-none-any.whl (5.3 kB)
+Collecting pywin32>=223
+  Downloading pywin32-305-cp36-cp36m-win_amd64.whl (12.2 MB)
+     |████████████████████████████████| 12.2 MB ...
+Collecting idna<4,>=2.5
+  Using cached idna-3.10-py3-none-any.whl (70 kB)
+Requirement already satisfied: certifi>=2017.4.17 in d:\users\user\miniconda3\envs\donkey_4.5.1\lib\site-packages (from requests->donkeycar==4.5.1) (2021.5.30)
+Collecting charset-normalizer~=2.0.0
+  Using cached charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+Building wheels for collected packages: opencv-python-headless, docopt, paho-mqtt, utm
+  Building wheel for opencv-python-headless (PEP 517) ... error
+  ERROR: Command errored out with exit status 1:
+   command: 'D:\Users\user\miniconda3\envs\donkey_4.5.1\python.exe' 'D:\Users\user\miniconda3\envs\donkey_4.5.1\lib\site-packages\pip\_vendor\pep517\in_process\_in_process.py' build_wheel 'C:\Users\user\AppData\Local\Temp\tmp0q6fwcnj'
+       cwd: C:\Users\user\AppData\Local\Temp\pip-install-s_r5pbtf\opencv-python-headless_195d9e0d54b34f49a781d342bd3ec5b5
+  Complete output (395 lines):
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'Ninja (Visual Studio 17 2022 x64 v143)' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      Ninja
+
+    does not support platform specification, but platform
+
+      x64
+
+    was specified.
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'Ninja (Visual Studio 17 2022 x64 v143)' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'Visual Studio 17 2022 x64 v143' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      Visual Studio 17 2022
+
+    could not find any instance of Visual Studio.
+
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'Visual Studio 17 2022 x64 v143' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'Ninja (Visual Studio 16 2019 x64 v142)' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      Ninja
+
+    does not support platform specification, but platform
+
+      x64
+
+    was specified.
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'Ninja (Visual Studio 16 2019 x64 v142)' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'Visual Studio 16 2019 x64 v142' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      Visual Studio 16 2019
+
+    could not find any instance of Visual Studio.
+
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'Visual Studio 16 2019 x64 v142' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'Ninja (Visual Studio 15 2017 x64 v141)' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      Ninja
+
+    does not support platform specification, but platform
+
+      x64
+
+    was specified.
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'Ninja (Visual Studio 15 2017 x64 v141)' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'Visual Studio 15 2017 x64 v141' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      Visual Studio 15 2017
+
+    could not find any instance of Visual Studio.
+
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'Visual Studio 15 2017 x64 v141' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'NMake Makefiles (Visual Studio 17 2022 x64 v143)' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      NMake Makefiles
+
+    does not support platform specification, but platform
+
+      x64
+
+    was specified.
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'NMake Makefiles (Visual Studio 17 2022 x64 v143)' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'NMake Makefiles (Visual Studio 16 2019 x64 v142)' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      NMake Makefiles
+
+    does not support platform specification, but platform
+
+      x64
+
+    was specified.
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'NMake Makefiles (Visual Studio 16 2019 x64 v142)' generator - failure
+  --------------------------------------------------------------------------------
+
+
+
+  --------------------------------------------------------------------------------
+  -- Trying 'NMake Makefiles (Visual Studio 15 2017 x64 v141)' generator
+  --------------------------------
+  ---------------------------
+  ----------------------
+  -----------------
+  ------------
+  -------
+  --
+  Not searching for unused variables given on the command line.
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+
+
+  CMake Error at CMakeLists.txt:2 (PROJECT):
+    Generator
+
+      NMake Makefiles
+
+    does not support platform specification, but platform
+
+      x64
+
+    was specified.
+
+
+  -- Configuring incomplete, errors occurred!
+  --
+  -------
+  ------------
+  -----------------
+  ----------------------
+  ---------------------------
+  --------------------------------
+  -- Trying 'NMake Makefiles (Visual Studio 15 2017 x64 v141)' generator - failure
+  --------------------------------------------------------------------------------
+
+  ********************************************************************************
+  scikit-build could not get a working generator for your system. Aborting build.
+
+  Building windows wheels for Python 3.6 requires Microsoft Visual Studio 2022.
+  Get it with "Visual Studio 2017":
+
+    https://visualstudio.microsoft.com/vs/
+
+  Or with "Visual Studio 2019":
+
+      https://visualstudio.microsoft.com/vs/
+
+  Or with "Visual Studio 2022":
+
+      https://visualstudio.microsoft.com/vs/
+
+  ********************************************************************************
+  ----------------------------------------
+  ERROR: Failed building wheel for opencv-python-headless
+  Building wheel for docopt (setup.py) ... done
+  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13723 sha256=440d3b6a7add9e4e0a9cc36c3a8e7bbc96cf554af68811a99d9471f511771368
+  Stored in directory: c:\users\user\appdata\local\pip\cache\wheels\3f\2a\fa\4d7a888e69774d5e6e855d190a8a51b357d77cc05eb1c097c9
+  Building wheel for paho-mqtt (setup.py) ... done
+  Created wheel for paho-mqtt: filename=paho_mqtt-1.6.1-py3-none-any.whl size=65452 sha256=4465b844ec28cf10ba45cddfaa467e6edd5947e6d785048b987ab3958a6c1590
+  Stored in directory: c:\users\user\appdata\local\pip\cache\wheels\7b\12\d4\89f50ad776a9048b4f315ad350735cd8e0613b761d1650f463
+  Building wheel for utm (setup.py) ... done
+  Created wheel for utm: filename=utm-0.7.0-py3-none-any.whl size=6108 sha256=4c951a02b87e1139b85b2e6cd56c92ab35a2f97470e2b7a1481c8b3978bb1e65
+  Stored in directory: c:\users\user\appdata\local\pip\cache\wheels\ab\8c\43\723355279387088dd6696089e77f9ddd242ba94e71a87c800f
+Successfully built docopt paho-mqtt utm
+Failed to build opencv-python-headless
+ERROR: Could not build wheels for opencv-python-headless which use PEP 517 and cannot be installed directly
+
+(donkey_4.5.1) d:\Documents\Projects\donkey_4_5>pip install opencv-python-headless==4.6.0.66
+Collecting opencv-python-headless==4.6.0.66
+  Downloading opencv_python_headless-4.6.0.66-cp36-abi3-win_amd64.whl (35.5 MB)
+     |████████████████████████████████| 35.5 MB 656 kB/s
+Collecting numpy>=1.13.3
+  Using cached numpy-1.19.5-cp36-cp36m-win_amd64.whl (13.2 MB)
+Installing collected packages: numpy, opencv-python-headless
+Successfully installed numpy-1.19.5 opencv-python-headless-4.6.0.66
+
+(donkey_4.5.1) d:\Documents\Projects\donkey_4_5>
