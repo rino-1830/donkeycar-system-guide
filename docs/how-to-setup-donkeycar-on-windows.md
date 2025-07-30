@@ -26,7 +26,9 @@ WSL 環境での構築については、別途 [こちら](https://github.com/ri
 ### Miniconda による仮想環境構築
 
 Miniconda がインストール出来たら、スタートメニューから Anaconda Prompt を起動します。  
-起動すると、次のようなプロンプトが表示されます。
+起動すると、次のようなプロンプトが表示されます。  
+`user` は Windows のユーザー名のプレースホルダーです。
+適宜読み替えてください。
 
 ```bash
 (base) C:\User\user>
@@ -64,7 +66,7 @@ DonkeyCar は Python ライブラリとして構築され、プロンプトコ�
 (donkey) C:\User\user\projects\donkeycar>
 ```
 
-クローンしたリポジトリに移動し、`setup.py` を使った依存関係のインストールを行いますが、<span style="color: red">**GPU を使用する場合とそうでない場合で導入手順が変わります**</span>。
+クローンしたリポジトリに移動し、`setup.py` を使った依存関係のインストールを行いますが、<font color="red">**GPU を使用する場合とそうでない場合で導入手順が変わります**</font>。
 
 #### GPU を使用する場合
 
@@ -166,11 +168,21 @@ Usage:
 
 前述の **GPU を使用する場合** を行った場合は、このセクションで先ほど導入したいくつかのパッケージを `donkeycar` の依存関係で上書きすることになりますが、正常な動作です。
 
-以下のコマンドでホスト PC に必要な依存環境を導入します。
+以下のコマンドで、`opencv-python-headless==4.6.0.66` をインストールします。  
+対応バージョン自体はより高いものがあるはずですが、不明な理由で wheel のビルドに失敗するためこのバージョン以外は使用できません。  
+これはホスト PC に限らず、NVIDIA Jetson Nano
+
+```bash
+(donkey) C:\User\user\projects\donkeycar> pip install opencv-python-headless==4.6.0.66
+```
+
+次に、以下のコマンドでホスト PC に必要な依存環境を導入します。
 
 ```bash
 (donkey) C:\User\user\projects\donkeycar> pip install -e .[pc]
 ```
+
+念のため、`pip check` などで依存関係の破綻を確認しておきます。
 
 正常に完了すると、ターミナルで `donkeycar` コマンドが利用可能になります。
 
