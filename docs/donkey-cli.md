@@ -11,6 +11,7 @@ donkey <command> [options]
 ## サブコマンド
 
 ### createcar
+
 - 車両ディレクトリを作成します。
 - 主なオプション
   - `--path` : 作成先ディレクトリを指定します。省略時は `~/mycar`。
@@ -18,15 +19,18 @@ donkey <command> [options]
   - `--overwrite` : 既存ファイルを上書きします。
 
 ### update
+
 - 既存の車両ディレクトリを最新のテンプレートで更新します。
 - 主なオプション
   - `--template` : 使用するテンプレートを指定します。
 
 ### findcar
+
 - ネットワークをスキャンして同一セグメントにある Donkeycar の IP アドレスを探します。
   内部では `nmap` を使用しており、結果は標準出力に表示されます。
 
 ### calibrate
+
 - ステアリングやモーターの PWM 設定を対話的に調整します。
 - 主なオプション
   - `--pwm-pin` : キャリブレーションするピンを `RPI_GPIO.BOARD.33` などで指定します。
@@ -37,11 +41,13 @@ donkey <command> [options]
   - `--arduino` : Arduino を使用する場合に指定します。
 
 ### tubclean
+
 - 指定したフォルダ内の Tub データを確認・削除できる Web サーバーを起動します。
 - 使用例: `donkey tubclean <tub_dir>`
   デフォルトのポートは **8886** で、ブラウザから `http://<host>:8886` にアクセスします。
 
 ### tubplot
+
 - 学習データとモデルを用いて、操舵角やスロットルの予測をグラフ表示します。
 - 主なオプション
   - `--tub` : 対象とする Tub のパス。
@@ -52,6 +58,7 @@ donkey <command> [options]
   - `--config` : 設定ファイルのパス。
 
 ### tubhist
+
 - Tub 内の各レコード種類の出現頻度をヒストグラム表示します。
 - 主なオプション
   - `--tub` : Tub のパス（複数指定可）。
@@ -59,6 +66,7 @@ donkey <command> [options]
   - `--out` : 出力ファイル名を指定します。省略時は `tub_hist.png` などが生成されます。
 
 ### makemovie
+
 - Tub データから走行動画を生成します。モデルを指定すると予測結果も映像に重ねられます。
 - 主なオプション
   - `--tub` : 対象 Tub。
@@ -73,9 +81,11 @@ donkey <command> [options]
   - `--draw-user-input` : ユーザーの入力を映像に描画するかどうか。
 
 ### createjs
+
 - ジョイスティックのボタンや軸を割り当て、操作クラスの雛形を生成します。
 
 ### cnnactivations
+
 - モデル内部の Convolution 層の出力を可視化します。
 - 主なオプション
   - `--image` : 入力画像。
@@ -83,6 +93,7 @@ donkey <command> [options]
   - `--config` : 設定ファイル。
 
 ### train
+
 - Tub データを使用してモデルを学習します。
 - 主なオプション
   - `--tub` : トレーニングに用いる Tub。
@@ -96,14 +107,17 @@ donkey <command> [options]
   - `--comment` : モデルデータベースに記録するコメント。
 
 ### models
+
 - 保存済みモデルの情報をデータベースから表示します。
 - 主なオプション
   - `--config` : 設定ファイル。
   - `--group` : Tub をグループ化して表示します。
 
 ### ui
+
 - Kivy ベースの GUI を起動します。ログの閲覧や学習の実行が可能です。
   `python3 -m pip install kivy` 等で Kivy をインストールしておく必要があります。
 
 ## 参考
+
 各コマンドの実装は `donkeycar/management/base.py` にあります。詳細な挙動や追加オプションについてはソースコードを参照してください。

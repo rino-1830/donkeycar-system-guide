@@ -46,7 +46,6 @@ python manage.py train \
 
 ## 主な機能とフロー
 
-
 1. `Vehicle` パイプラインを生成し、カメラ・コントローラ・AI モデルなどのパーツを追加。モードに応じて「手動」「自動」「ハイブリッド」を切り替え、走行ログを `TubWriter` で保存します。
 2. カメラ・オドメトリ・IMU・モーターなど個別ハードウェアを初期化し `Vehicle` に登録します。
 3. `docopt` で CLI 引数を解析し、`drive()` または `train()` を実行します。
@@ -175,4 +174,3 @@ IMU センサー 6 軸出力（加速度 3 + 角速度 3）を 1 つのタプル
 - **ソース**: [`donkeycar/templates/complete.py`](../../donkeycar/templates/complete.py)
 - **利用ライブラリ**: `docopt`, `numpy`, `keras`, `pytorch` ほか
 - 詳細なハードウェア設定については [公式ドキュメント](https://docs.donkeycar.com) を参照してください。
-
